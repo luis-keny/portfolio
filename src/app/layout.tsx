@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="dark">
       <body
         className={`${plusJakartaSans.variable} antialiased bg-gray-50 dark:bg-gray-950 dark:text-white`}
       >

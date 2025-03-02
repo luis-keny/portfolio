@@ -5,9 +5,9 @@ import { useEffect, useState, useRef } from "react";
 const THEMES = ["light", "dark", "system"];
 
 export default function ThemeToggle() {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentTheme, setCurrentTheme] = useState("system");
-  const [systemDark, setSystemDark] = useState(false);
+  const [systemDark, setSystemDark] = useState(true);
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -15,15 +15,11 @@ export default function ThemeToggle() {
     if (typeof localStorage !== "undefined") {
       return localStorage.getItem("theme") || "system";
     }
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
+    return "system";
   };
 
-  const updateTheme = (theme: string) => {
-    const isDark =
-      theme === "dark" || (theme === "system" && systemDark);
-      
+  const updateTheme = (theme: string, isSystemDark: boolean) => {
+    const isDark = theme === "dark" || (theme === "system" && isSystemDark);
     document.documentElement.setAttribute(
       "data-theme",
       isDark ? "dark" : "light"
@@ -38,28 +34,29 @@ export default function ThemeToggle() {
   };
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    
+    const savedTheme = getThemePreference();
+    setCurrentTheme(savedTheme);
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");    
+    setSystemDark(mediaQuery.matches);
+
+    updateTheme(savedTheme, mediaQuery.matches);
+
     const handleSystemChange = (e: MediaQueryListEvent) => {
-      console.log("system theme change", e.matches);
       setSystemDark(e.matches);
       if (currentTheme === "system") {
-        updateTheme("system");
+        updateTheme("system", systemDark);
       }
     };
 
-    const savedTheme = getThemePreference();
-    setCurrentTheme(savedTheme);
-    setSystemDark(mediaQuery.matches);
-    
     mediaQuery.addEventListener("change", handleSystemChange);
-    
-    return () => mediaQuery.removeEventListener("change", handleSystemChange);
+    return () => {
+      mediaQuery.removeEventListener("change", handleSystemChange);
+    };
   }, []);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      // Verificar si el clic fue fuera del menú y del botón
       if (
         menuRef.current &&
         !menuRef.current.contains(e.target as Node) &&
@@ -75,7 +72,7 @@ export default function ThemeToggle() {
   }, []);
 
   const handleOpenMenu = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Detener la propagación aquí
+    e.stopPropagation();
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -106,9 +103,7 @@ export default function ThemeToggle() {
         ref={menuRef}
         id="themes-menu"
         className={`absolute scale-80 top-9 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md transition-transform ${
-          isMenuOpen
-            ? "scale-100 opacity-100 visible"
-            : "scale-90 opacity-0 invisible"
+          isMenuOpen ? "scale-100 opacity-100 visible" : "scale-90 opacity-0 invisible"
         }`}
       >
         <ul>
@@ -116,7 +111,7 @@ export default function ThemeToggle() {
             <li
               key={theme}
               className="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm capitalize"
-              onClick={() => updateTheme(theme)}
+              onClick={() => updateTheme(theme, systemDark)}
             >
               {theme}
             </li>
