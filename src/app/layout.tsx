@@ -8,8 +8,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Porfolio lunydev",
-  description: "Portafolio profesional de Lunydev, experto en desarrollo web, diseño de interfaces y soluciones digitales. Aquí podrás explorar mis proyectos en nextjs, angular, tailwind, astro, vue, etc. Cada trabajo refleja mi enfoque innovador y mi habilidad para crear experiencias digitales únicas y funcionales.",
+  title: "Porfolio lukdev",
+  description: "Professional portfolio of lukdev, expert in web development, interface design and digital solutions. Here you can explore my projects in nextjs, angular, tailwind, astro, vue, etc. Each work reflects my innovative approach and my ability to create unique and functional digital experiences.",
 };
 
 export default function RootLayout({
