@@ -46,7 +46,7 @@ const PROJECTS: CardProjectType[] = [
   },
   {
     title: "Amazon refuge - landing page",
-    description: "Informative website about the benefits and services offered by the amazon refuge business. In addition, it is translated into English and Spanish language to make it easier to read for foreign customers and Spanish speaking people.",
+    description: "Website showcasing the benefits and services of the Amazon refuge business, available in both English and Spanish for broader accessibility. It also includes PHP integration with PHPMailer for email functionality.",
     image: AmazonRefuge,
     tags: [
       <GitTag key={`amazon-refuge-git`}/>,
@@ -54,6 +54,7 @@ const PROJECTS: CardProjectType[] = [
       <CssTag key={`amazon-refuge-css`}/>,
       <JavascriptTag key={`amazon-refuge-js`}/>,
     ],
+    linkRepo: "https://github.com/luis-keny/amazon-refuje-landing/tree/php",
     linkDemo: "https://amazon-refuje-landing.vercel.app/",
   },
   {
