@@ -8,21 +8,20 @@ export default function About() {
         <h2 className="text-3xl font-semibold">About</h2>
       </div>
       <main className="mt-8 description space-y-3">
-        <p>
-          I am <span>Luis Keny</span>, passionate about <span>programming and software development.</span>
-          Throughout my career, I have had the opportunity to <span>develop multiple web applications</span>,
-          which has allowed me to dive into real technological solutions.
-        </p>
-        <p>
-          Currently, together with a group of friends, we are <span>creating a consulting company dedicated
-            to software development</span>, with the goal of offering <span>innovative solutions</span> to various
-          sectors. I enjoy programming because it allows me to break down complex problems in a more granular way
-          and find effective solutions.
-        </p>
-        <p>
-          In addition, I enjoy a good cup of coffee while working, which helps me stay focused and motivated.
-          <span>I am excited to continue my professional journey and contribute to the tech community.</span>
-        </p>
+      <p>
+        I am <span>Luis Keny</span>, passionate about <span>programming</span> and <span>software development</span>. 
+        Throughout my career, I have had the opportunity to develop multiple <span>web applications</span>, 
+        which has allowed me to immerse myself in real <span>technological solutions</span>.
+      </p>
+      <p>
+        I enjoy <span>programming</span> because it allows me to break down <span>complex problems</span> in 
+        a more granular way and find <span>effective solutions</span>. In addition, I enjoy a good 
+        cup of <span>coffee</span> while I work, which helps me stay focused and motivated.
+      </p>
+      <p>
+        I am excited to continue my <span>professional journey</span> and contribute to 
+        the <span>technology community</span>.
+      </p>
       </main>
     </section>
   )

@@ -27,9 +27,10 @@ export default function ExperienceItem({ title, company, description, link, date
           <a
             href={link}
             role="link"
+            target="_blank"
             className="inline-flex items-center text-lg font-medium text-teal-500 dark:text-teal-200 dark:hover:text-teal-300 hover:text-teal-700"
           >
-            Saber más
+            Learn more
             <ChevronRight size={24}/>
           </a>
         )}
