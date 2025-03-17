@@ -42,9 +42,9 @@ export default function Hero() {
       />
       <div className="absolute top-1/2 left-0 -translate-y-1/2 flex flex-col justify-center gap-3 max-w-[550px]">
         <div className="flex flex-col gap-4 items-start sm:flex-row sm:items-end">
-          <h1 className="text-5xl font-semibold">{"Hi, I'm Lukdev"}</h1>
+          <h1 className="text-5xl font-semibold">{"Hi, I'm Luis Keny"}</h1>
           <span className="relative text-sm text-teal-800 dark:text-teal-200 px-3 font-medium backdrop-blur-2xl py-1 rounded-xl">
-            Software Developer
+            Full Stack Developer
             <BorderBeam
               duration={6}
               size={400}
