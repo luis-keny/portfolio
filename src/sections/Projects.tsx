@@ -2,7 +2,7 @@ import { CardProject } from "@/components/CardProject";
 import { CardProject as CardProjectType } from "@/interfaces/card-project";
 import { Code2 } from "lucide-react";
 
-// import AngularCalendar from '@/public/projects/angular-calendar.jpg';
+import AngularCalendar from '@/public/projects/angular-calendar.jpg';
 import AdrLuceros from '@/public/projects/adrluceros-landingpage.jpg';
 import PlayRunJs from '@/public/projects/play-run-js.png';
 import AmazonRefuge from '@/public/projects/amazon-refuge.png'
@@ -16,20 +16,20 @@ import HtmlTag from "@/components/tag/HtmlTag";
 import JavascriptTag from "@/components/tag/JavascriptTag";
 
 const PROJECTS: CardProjectType[] = [
-  // {
-  //   title: "Angular Calendar",
-  //   description: "is a customizable and responsive calendar component built with Angular 18, inspired by Google Calendar. It allows developers to manage events with multiple views (day, week, month, year) without the need for additional libraries.",
-  //   image: AngularCalendar,
-  //   tags: [
-  //     <AngularTag key={`angular-tag-angular-calendar`}/>,
-  //     <GitTag key={`git-tag-angular-calendar`}/>,
-  //     <TypescriptTag key={`typescript-tag-angular-calendar`}/>,
-  //     <CssTag key={`css-tag-angular-calendar`}/>,
-  //     <HtmlTag key={`html-tag-angular-calendar`}/>,
-  //   ],
-  //   linkDemo: "https://angular-calendar-ten.vercel.app/",
-  //   linkRepo: "https://github.com/luis-keny/angular-calendar",
-  // },
+  {
+    title: "Angular Calendar",
+    description: "is a customizable and responsive calendar component built with Angular 18, inspired by Google Calendar. It allows developers to manage events with multiple views (day, week, month, year).",
+    image: AngularCalendar,
+    tags: [
+      <AngularTag key={`calendar-angular`}/>,
+      <GitTag key={`calendar-git`}/>,
+      <TypescriptTag key={`calendar-ts`}/>,
+      <CssTag key={`calendar-css`}/>,
+      <HtmlTag key={`calendar-html`}/>,
+    ],
+    linkDemo: "https://angular-calendar-ten.vercel.app/",
+    linkRepo: "https://github.com/luis-keny/angular-calendar",
+  },
   {
     title: "Play Run JS",
     description: "The project executes JavaScript code and displays the console.log on the web. Also, the code that is written is passed in the URL using Base64, which makes it easy to share.",
