@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "luis keny's portfolio",
     images: [
       {
-        url: '/global/portfolio.png',
+        url: '/global/portfolio.avif',
         width: 1200,
         height: 630,
         alt: 'Luis Keny Portfolio Image',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: 'Portfolio Luis Keny',
     images: [
       {
-        url: '/global/portfolio.png',
+        url: '/global/portfolio.avif',
         width: 1200,
         height: 630,
         alt: 'Luis Keny Portfolio Image',
