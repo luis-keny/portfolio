@@ -8,8 +8,44 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Porfolio lukdev",
-  description: "Professional portfolio of lukdev, expert in web development, interface design and digital solutions. Here you can explore my projects in nextjs, angular, tailwind, astro, vue, etc. Each work reflects my innovative approach and my ability to create unique and functional digital experiences.",
+  title: "Portfolio Luis Keny",
+  keywords: [
+    'luis-keny',
+    'Luis Keny Lucero Balvin',
+    'luis keny',
+    'portfolio',
+    'porfolio',
+    "luis keny's professional portfolio",
+    "luis keny's portfolio",
+  ],
+  description: "Professional portfolio of Luis Keny, expert in web development, interface design and digital solutions. Here you can explore my projects in nextjs, angular, tailwind, astro, vue, etc. Each work reflects my innovative approach and my ability to create unique and functional digital experiences.",
+  openGraph: {
+    title: "luis keny's portfolio",
+    description: 'Explore the professional portfolio of Luis Keny, a web developer with a unique approach.',
+    url: 'https://luis-keny.dev/',
+    siteName: "luis keny's portfolio",
+    images: [
+      {
+        url: '/global/portfolio.png',
+        width: 1200,
+        height: 630,
+        alt: 'Luis Keny Portfolio Image',
+      },
+    ]
+  },
+  twitter: {
+    site: '@luis_keny_https',
+    card: 'summary_large_image',
+    title: 'Portfolio Luis Keny',
+    images: [
+      {
+        url: '/global/portfolio.png',
+        width: 1200,
+        height: 630,
+        alt: 'Luis Keny Portfolio Image',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
