@@ -7,4 +7,5 @@ export interface CardProject {
   tags: React.ReactNode[];
   linkRepo?: string;
   linkDemo?: string;
+  className?: string;
 }

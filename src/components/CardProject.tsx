@@ -5,9 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-export function CardProject({ title, description, image, tags, linkRepo, linkDemo }: CardProject) {
+export function CardProject({ title, description, image, tags, linkRepo, linkDemo, className = '' }: CardProject) {
   return (
-    <article className="rounded-2xl border border-teal-700/30 dark:border-teal-500/30 bg-transparent overflow-hidden">
+    <article className={`rounded-2xl border border-teal-700/30 dark:border-teal-500/30 bg-transparent overflow-hidden ${className}`}>
       <MagicCard gradientColor={"#00bba733"} className="bg-transparent h-full">
         <div>
           <div className="flex flex-col items-center justify-center">
