@@ -6,16 +6,16 @@ const THEMES = ["light", "dark", "system"];
 
 export default function ThemeToggle() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState("system");
+  const [currentTheme, setCurrentTheme] = useState("dark");
   const [systemDark, setSystemDark] = useState(true);
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const getThemePreference = () => {
     if (typeof localStorage !== "undefined") {
-      return localStorage.getItem("theme") || "system";
+      return localStorage.getItem("theme") || "dark";
     }
-    return "system";
+    return "dark";
   };
 
   const updateTheme = (theme: string, isSystemDark: boolean) => {

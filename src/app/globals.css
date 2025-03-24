@@ -147,5 +147,5 @@ html {
 }
 
 .description span {
-  @apply text-teal-600 dark:text-teal-400 font-medium;
+  @apply text-teal-700 dark:text-teal-400 font-medium;
 }

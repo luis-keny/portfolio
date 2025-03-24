@@ -4,4 +4,5 @@ export interface Experience {
   company: string;
   description: string;
   link?: string;
+  tags?: React.ReactNode[];
 }
